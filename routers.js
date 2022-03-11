@@ -71,7 +71,7 @@ router.get("/Userprofile/byId", (request, response) => {
 
 
 // can't do this. didn't do form. End point from postman works.
-/*
+
 router.post("/Userprofile/add", (request, response) => {
    connection.query(
       `INSERT INTO Userprofile (first_name, last_name,
@@ -101,7 +101,7 @@ router.post("/Userprofile/add", (request, response) => {
     );
 
 });
-*/
+
 /*
 router.get("/Userprofile/searchbyid", (request, response) => {
   connection.query(
