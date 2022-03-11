@@ -42,7 +42,8 @@ router.get('/', (request, response) => {
 });
 
 router.get("/Userprofile/all", (request, response) => {
-  connection.query("SELECT * FROM Userprofile", (errors, results) => {
+  //connection.query("SELECT * FROM Userprofile", (errors, results) => {
+    connection.query("SELECT first_name, last_name, email, wp.work_profile_id, monthly_income FROM Userprofile INNER JOIN Workprofile wp ON Userprofile.work_profile_id = wp.work_profile_id", (errors, results) => {
       if (errors) {
           console.log(errors);
           response.status(500).send("Something went wrong...");
